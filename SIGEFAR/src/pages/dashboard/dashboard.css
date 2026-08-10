@@ -1,0 +1,65 @@
+/* Define el área principal del contenido. */
+.contenido{
+    margin-left:260px;
+    min-height:100vh;
+    background:#f4f6f9;
+}
+
+/* Organiza las tarjetas del Dashboard. */
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:30px;
+}
+
+/* Da formato general a las tarjetas. */
+.card-dashboard{
+    color:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+/* Ajusta el tamaño del valor mostrado. */
+.card-dashboard h2{
+    margin-top:15px;
+    font-size:35px;
+}
+
+/* Da espacio a la tabla de ventas. */
+.tabla{
+    padding:0 30px 30px;
+}
+
+/* Color de la tarjeta de clientes. */
+.card-clientes {
+    background: #18A979;
+}
+
+/* Color de la tarjeta de medicamentos. */
+.card-medicamentos {
+    background: #12A6A6;
+}
+
+/* Color de la tarjeta de ventas. */
+.card-ventas {
+    background: #18A979;
+}
+
+/* Color de la tarjeta de ingresos. */
+.card-ingresos {
+    background: #12A6A6;
+}
+
+/* Mantiene el estilo de los enlaces de las tarjetas. */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Eleva la tarjeta al pasar el cursor. */
+.card-link:hover .card-dashboard {
+    transform: translateY(-3px);
+    transition: 0.2s;
+}
