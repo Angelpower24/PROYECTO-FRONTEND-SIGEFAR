@@ -135,3 +135,30 @@
     font-size: 13px;
     color: #666;
 }
+
+/* HEADER RESPONSIVE */
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        min-height: 80px;
+        padding: 15px 15px 15px 75px;
+        gap: 15px;
+    }
+    .header h2 {
+        font-size: 20px;
+    }
+    .header p {
+        font-size: 12px;
+    }
+    .usuario {
+        font-size: 13px;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .usuario i {
+        font-size: 25px;
+    }
+    .hora {
+        font-size: 11px;
+    }
+}

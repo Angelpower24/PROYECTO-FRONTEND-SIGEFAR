@@ -52,3 +52,16 @@
 .btn {
     border-radius: 7px;
 }
+
+@media (max-width: 992px) {
+    .contenido {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido {
+        margin-left: 0;
+        width: 100%;
+    }
+}

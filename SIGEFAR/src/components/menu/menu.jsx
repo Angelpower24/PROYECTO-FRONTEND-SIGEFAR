@@ -8,16 +8,30 @@ import { Link } from "react-router-dom";
 // Importa los iconos de Bootstrap.
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-function Menu() {
-return (
+import { useState } from "react";
 
-    <aside className="sidebar">
+function Menu() {
+    const [menuAbierto, setMenuAbierto] = useState(false);
+    const cerrarMenu = () => {
+        setMenuAbierto(false);
+    };
+    return (
+
+    <>
+        <button
+            className="boton-menu"
+            onClick={() => setMenuAbierto(!menuAbierto)}
+        >
+            <i className={menuAbierto ? "bi bi-x-lg" : "bi bi-list"}></i>
+        </button>
+
+    <aside className={`sidebar ${menuAbierto ? "menu-abierto" : ""}`}>
 
         {/* Contiene el logo y la información del sistema. */}
         <div className="logo-container">
 
             {/* Permite volver al inicio al hacer clic en el logo. */}
-            <Link to="/dashboard">
+            <Link to="/dashboard" onClick={cerrarMenu}>
                 <img src={logo} alt="SIGEFAR" className="logo" />
             </Link>
 
@@ -33,35 +47,35 @@ return (
 
                 {/* Enlaces a los módulos principales. */}
                 <li>
-                    <Link to="/dashboard">
+                    <Link to="/dashboard" onClick={cerrarMenu}>
                         <i className="bi bi-house-door-fill"></i>
                         <span>Inicio</span>
                     </Link>
                 </li>
 
                 <li>
-                    <Link to="/clientes">
+                    <Link to="/clientes" onClick={cerrarMenu}>
                         <i className="bi bi-people-fill"></i>
                         <span>Clientes</span>
                     </Link>
                 </li>
 
                 <li>
-                    <Link to="/medicamentos">
+                    <Link to="/medicamentos" onClick={cerrarMenu}>
                         <i className="bi bi-capsule"></i>
                         <span>Medicamentos</span>
                     </Link>
                 </li>
 
                 <li>
-                    <Link to="/ventas">
+                    <Link to="/ventas" onClick={cerrarMenu}>
                         <i className="bi bi-receipt"></i>
                         <span>Ventas</span>
                     </Link>
                 </li>
 
                 <li>
-                    <Link to="/registros">
+                    <Link to="/registros" onClick={cerrarMenu}>
                         <i className="bi bi-clock-history"></i>
                         <span>Registros</span>
                     </Link>
@@ -72,6 +86,7 @@ return (
         </nav>
 
     </aside>
+</>
 );
 
 }

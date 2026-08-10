@@ -221,51 +221,55 @@ function Registros() {
 
                         </div>
 
-                        {/* Tabla que muestra los registros. */}
-                        <table className="table table-hover">
+                        <div className="table-responsive">
 
-                            <thead>
+                            {/* Tabla que muestra los registros. */}
+                            <table className="table table-hover">
 
-                                <tr>
-                                    <th className="text-center">Hora</th>
-                                    <th className="text-center">Módulo</th>
-                                    <th className="text-center">Acción</th>
-                                    <th className="text-center">Información</th>
-                                </tr>
+                                <thead>
 
-                            </thead>
-
-                            <tbody>
-
-                                {registrosFiltrados.map((registro, index) => (
-
-                                    <tr key={index}>
-                                        <td className="text-center">{registro.hora}</td>
-                                        <td className="text-center">{registro.modulo}</td>
-                                        <td className="text-center">
-                                            <span
-                                                className={
-                                                    registro.accion === "Registrar"
-                                                        ? "badge bg-success"
-                                                        : registro.accion === "Actualizar"
-                                                        ? "badge bg-primary"
-                                                        : registro.accion === "Eliminar"
-                                                        ? "badge bg-danger"
-                                                        : "badge bg-secondary"
-                                                }
-                                            >
-                                                {registro.accion}
-                                            </span>
-                                        </td>
-
-                                        <td className="text-center">{registro.informacion}</td>
+                                    <tr>
+                                        <th className="text-center">Hora</th>
+                                        <th className="text-center">Módulo</th>
+                                        <th className="text-center">Acción</th>
+                                        <th className="text-center">Información</th>
                                     </tr>
 
-                                ))}
+                                </thead>
 
-                            </tbody>
+                                <tbody>
 
-                        </table>
+                                    {registrosFiltrados.map((registro, index) => (
+
+                                        <tr key={index}>
+                                            <td className="text-center">{registro.hora}</td>
+                                            <td className="text-center">{registro.modulo}</td>
+                                            <td className="text-center">
+                                                <span
+                                                    className={
+                                                        registro.accion === "Registrar"
+                                                            ? "badge bg-success"
+                                                            : registro.accion === "Actualizar"
+                                                            ? "badge bg-primary"
+                                                            : registro.accion === "Eliminar"
+                                                            ? "badge bg-danger"
+                                                            : "badge bg-secondary"
+                                                    }
+                                                >
+                                                    {registro.accion}
+                                                </span>
+                                            </td>
+
+                                            <td className="text-center">{registro.informacion}</td>
+                                        </tr>
+
+                                    ))}
+
+                                </tbody>
+
+                            </table>
+
+                        </div>    
 
                     </div>
 

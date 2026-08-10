@@ -110,56 +110,60 @@ function Dashboard(){
 
                         <div className="card-body">
 
-                            <table className="table table-hover">
+                            <div className="table-responsive">
 
-                                <thead>
+                                <table className="table table-hover">
 
-                                    <tr>
-                                        <th className="text-center">ID</th>
-                                        <th className="text-center">Fecha</th>
-                                        <th className="text-center">Cliente</th>
-                                        <th className="text-center">Medicamento</th>
-                                        <th className="text-center">Cantidad</th>
-                                        <th className="text-center">Total</th>
-                                    </tr>
-
-                                </thead>
-
-                                <tbody>
-
-                                    {ventas.length === 0 ? (
+                                    <thead>
 
                                         <tr>
-                                            <td
-                                                colSpan="5"
-                                                className="text-center"
-                                            >
-                                                No existen ventas registradas
-                                            </td>
+                                            <th className="text-center">ID</th>
+                                            <th className="text-center">Fecha</th>
+                                            <th className="text-center">Cliente</th>
+                                            <th className="text-center">Medicamento</th>
+                                            <th className="text-center">Cantidad</th>
+                                            <th className="text-center">Total</th>
                                         </tr>
 
-                                    ) : (
+                                    </thead>
 
-                                        ventas
-                                            .slice(0, 5)
-                                            .map((venta) => (
+                                    <tbody>
 
-                                                <tr key={venta.id_venta}>
-                                                    <td className="text-center"> {venta.id_venta} </td>
-                                                    <td className="text-center"> {venta.fecha_venta} </td>
-                                                    <td className="text-center"> {venta.nomb_cli} {venta.ape_cli} </td>
-                                                    <td className="text-center"> {venta.nomb_med} </td>
-                                                    <td className="text-center"> {venta.cantidad} </td>
-                                                    <td className="text-center"> S/.{" "} {Number(venta.total).toFixed(2)} </td>
-                                                </tr>
+                                        {ventas.length === 0 ? (
 
-                                            ))
+                                            <tr>
+                                                <td
+                                                    colSpan="5"
+                                                    className="text-center"
+                                                >
+                                                    No existen ventas registradas
+                                                </td>
+                                            </tr>
 
-                                    )}
+                                        ) : (
 
-                                </tbody>
+                                            ventas
+                                                .slice(0, 5)
+                                                .map((venta) => (
 
-                            </table>
+                                                    <tr key={venta.id_venta}>
+                                                        <td className="text-center"> {venta.id_venta} </td>
+                                                        <td className="text-center"> {venta.fecha_venta} </td>
+                                                        <td className="text-center"> {venta.nomb_cli} {venta.ape_cli} </td>
+                                                        <td className="text-center"> {venta.nomb_med} </td>
+                                                        <td className="text-center"> {venta.cantidad} </td>
+                                                        <td className="text-center"> S/.{" "} {Number(venta.total).toFixed(2)} </td>
+                                                    </tr>
+
+                                                ))
+
+                                        )}
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>    
 
                         </div>
 

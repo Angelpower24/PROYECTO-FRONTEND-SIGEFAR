@@ -310,69 +310,73 @@ function Clientes() {
 
                                     </div>
 
-                                    <table className="table table-hover">
+                                    <div className="table-responsive">
 
-                                        <thead>
+                                        <table className="table table-hover">
 
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>DNI</th>
-                                                <th>Teléfono</th>
-                                                <th>Acciones</th>
-                                            </tr>
-
-                                        </thead>
-
-                                        <tbody>
-
-                                            {clientesFiltrados.length === 0 ? (
+                                            <thead>
 
                                                 <tr>
-                                                    <td colSpan="6" className="text-center">
-                                                        {clientes.length === 0
-                                                            ? "No existen clientes registrados"
-                                                            : "No se encontraron clientes con esa búsqueda"
-                                                        }
-                                                    </td>
+                                                    <th>ID</th>
+                                                    <th>Nombre</th>
+                                                    <th>Apellido</th>
+                                                    <th>DNI</th>
+                                                    <th>Teléfono</th>
+                                                    <th>Acciones</th>
                                                 </tr>
 
-                                            ) : (
+                                            </thead>
 
-                                                clientesFiltrados.map((cliente) => (
+                                            <tbody>
 
-                                                    <tr key={cliente.id_cliente}>
-                                                        <td>{cliente.id_cliente}</td>
-                                                        <td>{cliente.nomb_cli}</td>
-                                                        <td>{cliente.ape_cli}</td>
-                                                        <td>{cliente.dni}</td>
-                                                        <td>{cliente.telefono}</td>
-                                                        <td>
-                                                            <button
-                                                                className="btn btn-warning btn-sm me-2"
-                                                                onClick={() => editarCliente(cliente)}
-                                                                title="Editar cliente"
-                                                            >
-                                                                <i className="bi bi-pencil-square"></i>
-                                                            </button>
+                                                {clientesFiltrados.length === 0 ? (
 
-                                                            <button
-                                                                className="btn btn-danger btn-sm"
-                                                                onClick={() => eliminarCliente(cliente.id_cliente)}
-                                                                title="Eliminar cliente"
-                                                            >
-                                                                <i className="bi bi-trash-fill"></i>
-                                                            </button>                                                
+                                                    <tr>
+                                                        <td colSpan="6" className="text-center">
+                                                            {clientes.length === 0
+                                                                ? "No existen clientes registrados"
+                                                                : "No se encontraron clientes con esa búsqueda"
+                                                            }
                                                         </td>
                                                     </tr>
-                                                ))
 
-                                            )}
+                                                ) : (
 
-                                        </tbody>
+                                                    clientesFiltrados.map((cliente) => (
 
-                                    </table>
+                                                        <tr key={cliente.id_cliente}>
+                                                            <td>{cliente.id_cliente}</td>
+                                                            <td>{cliente.nomb_cli}</td>
+                                                            <td>{cliente.ape_cli}</td>
+                                                            <td>{cliente.dni}</td>
+                                                            <td>{cliente.telefono}</td>
+                                                            <td>
+                                                                <button
+                                                                    className="btn btn-warning btn-sm me-2"
+                                                                    onClick={() => editarCliente(cliente)}
+                                                                    title="Editar cliente"
+                                                                >
+                                                                    <i className="bi bi-pencil-square"></i>
+                                                                </button>
+
+                                                                <button
+                                                                    className="btn btn-danger btn-sm"
+                                                                    onClick={() => eliminarCliente(cliente.id_cliente)}
+                                                                    title="Eliminar cliente"
+                                                                >
+                                                                    <i className="bi bi-trash-fill"></i>
+                                                                </button>                                                
+                                                            </td>
+                                                        </tr>
+                                                    ))
+
+                                                )}
+
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>    
 
                                 </div>
 
