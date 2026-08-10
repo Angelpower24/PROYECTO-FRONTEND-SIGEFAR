@@ -1,0 +1,84 @@
+/* Configura la barra lateral del sistema. */
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:#0B2743;
+    color:white;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    box-shadow:2px 0 8px rgba(0,0,0,.2);
+}
+
+/* Centra el logo y la información del sistema. */
+.logo-container{
+    text-align:center;
+    padding:25px 20px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+/* Ajusta el tamaño del logo. */
+.logo{
+    width:90px;
+    margin-bottom:10px;
+}
+
+/* Da formato al nombre del sistema. */
+.logo-container h2{
+    margin:0;
+    font-weight:bold;
+}
+
+/* Da formato a la descripción del sistema. */
+.logo-container p{
+    font-size:13px;
+    margin-top:8px;
+    opacity:.8;
+}
+
+/* Separa las opciones de navegación del logo. */
+.sidebar nav{
+    margin-top:25px;
+}
+
+/* Elimina el estilo predeterminado de la lista. */
+.sidebar ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+/* Separa las opciones del menú. */
+.sidebar li{
+    margin:8px 15px;
+}
+
+/* Da formato a los enlaces del menú. */
+.sidebar a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:10px;
+    transition:.3s;
+    font-size:17px;
+}
+
+/* Cambia el fondo al pasar el cursor. */
+.sidebar a:hover{
+    background:#1559A6;
+}
+
+/* Ajusta el tamaño de los iconos. */
+.sidebar i{
+    font-size:20px;
+}
+
+/* Permite que el logo funcione como enlace. */
+.logo-container a {
+    display: contents;
+}
