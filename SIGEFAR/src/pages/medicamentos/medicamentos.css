@@ -1,0 +1,66 @@
+/* Define el área principal del contenido. */
+.contenido {
+    margin-left: 260px;
+    min-height: 100vh;
+    background: #f4f6f9;
+}
+
+/* Da espacio al contenido de medicamentos. */
+.medicamentos-contenido {
+    padding: 25px 30px;
+}
+
+/* Da formato general a las tarjetas. */
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+/* Da formato al encabezado de las tarjetas. */
+.card-header {
+    background: white;
+    border-bottom: 1px solid #e9ecef;
+    padding: 18px 20px;
+}
+
+/* Da formato al título de las tarjetas. */
+.card-header h5 {
+    margin: 0;
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Da formato a las etiquetas del formulario. */
+.form-label {
+    font-weight: 600;
+}
+
+/* Da formato a los campos de entrada. */
+.form-control {
+    border-radius: 7px;
+}
+
+/* Resalta el campo al seleccionarlo. */
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* Centra verticalmente el contenido de la tabla. */
+.table {
+    vertical-align: middle;
+}
+
+/* Da formato a los encabezados de la tabla. */
+.table th {
+    font-weight: 600;
+}
+
+/* Centra verticalmente las celdas. */
+.table td {
+    vertical-align: middle;
+}
+
+/* Redondea los botones. */
+.btn {
+    border-radius: 7px;
+}
