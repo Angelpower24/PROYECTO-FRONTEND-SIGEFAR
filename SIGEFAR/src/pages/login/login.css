@@ -1,0 +1,117 @@
+/* Define el fondo del Login. */
+body{
+background:#eef2f7;
+}
+
+/* Centra el formulario en la pantalla. */
+.login-container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+/* Define el tamaño y estilo de la tarjeta. */
+.login-card{
+width:900px;
+height:500px;
+background:white;
+border-radius:15px;
+overflow:hidden;
+}
+
+/* Centra el logo y su información. */
+.logo-section{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+border-right:1px solid #e5e5e5;
+}
+
+/* Ajusta el tamaño del logo. */
+.logo{
+width:140px;
+margin-bottom:20px;
+}
+
+/* Da formato al nombre del sistema. */
+.logo-section h1{
+color:#0d47a1;
+font-weight:bold;
+}
+
+/* Da formato a la descripción. */
+.logo-section p{
+text-align:center;
+color:#555;
+}
+
+/* Define el espacio del formulario. */
+.formulario{
+padding:60px;
+}
+
+/* Da formato al título del formulario. */
+.formulario h3{
+font-weight:bold;
+}
+
+/* Da formato a las etiquetas. */
+.formulario label{
+font-weight:600;
+margin-bottom:5px;
+}
+
+/* Da formato al enlace. */
+.formulario a{
+text-decoration:none;
+font-size:14px;
+}
+
+/* ============================= */
+/* RESPONSIVE - CELULARES */
+/* ============================= */
+
+@media (max-width: 768px) {
+.login-container {
+height:auto;
+min-height:100vh;
+padding:20px;
+}
+
+    /* Adapta la tarjeta al tamaño de pantalla. */
+    .login-card {
+        width:100%;
+        height:auto;
+        min-height:auto;
+        border-radius:15px;
+    }
+
+    /* Ajusta la sección del logo en celulares. */
+    .logo-section {
+        padding:35px 20px;
+        border-right:none;
+        border-bottom:1px solid #e5e5e5;
+    }
+
+    /* Reduce el tamaño del logo. */
+    .logo {
+        width:100px;
+        margin-bottom:15px;
+    }
+
+    /* Reduce el tamaño del título. */
+    .logo-section h1 {
+        font-size:30px;
+    }
+
+    .logo-section p {
+        margin-bottom:0;
+    }
+
+    /* Reduce el espacio del formulario. */
+    .formulario {
+        padding:35px 25px;
+    }
+}
